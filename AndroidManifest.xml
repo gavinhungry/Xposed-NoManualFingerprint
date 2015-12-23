@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.gavinhungry.xposed.nomanualfingerprint"
+    android:versionCode="0"
+    android:versionName="0.0.0">
+
+  <uses-sdk android:minSdkVersion="23" />
+
+  <application android:label="No Manual Fingerprint">
+    <meta-data
+      android:name="xposedmodule"
+      android:value="true" />
+    <meta-data
+      android:name="xposeddescription"
+      android:value="Disable fingerprint unlock when manually locked" />
+    <meta-data
+      android:name="xposedminversion"
+      android:value="54" />
+  </application>
+</manifest>

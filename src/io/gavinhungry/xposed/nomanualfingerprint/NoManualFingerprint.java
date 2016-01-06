@@ -13,7 +13,7 @@ public class NoManualFingerprint implements IXposedHookLoadPackage {
       return;
     }
 
-     XposedHelpers.findAndHookMethod("com.android.internal.widget.LockPatternUtils$StrongAuthTracker", lpparam.classLoader,
+    XposedHelpers.findAndHookMethod("com.android.internal.widget.LockPatternUtils$StrongAuthTracker", lpparam.classLoader,
       "isFingerprintAllowedForUser", int.class, new XC_MethodReplacement() {
 
       @Override

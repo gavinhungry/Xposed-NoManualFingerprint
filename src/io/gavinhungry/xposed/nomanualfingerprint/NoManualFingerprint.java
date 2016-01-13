@@ -17,7 +17,7 @@ public class NoManualFingerprint implements IXposedHookLoadPackage {
       "isFingerprintAllowedForUser", int.class, new XC_MethodReplacement() {
 
       @Override
-      protected Object replaceHookedMethod(MethodHookParam param) throws Throwable {
+      protected Object replaceHookedMethod(final MethodHookParam param) throws Throwable {
         int userId = (Integer) param.args[0];
         int strongAuthForUser = (Integer) XposedHelpers.callMethod(param.thisObject, "getStrongAuthForUser", userId);
 

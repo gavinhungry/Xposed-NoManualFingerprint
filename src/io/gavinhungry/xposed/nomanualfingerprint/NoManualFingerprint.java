@@ -18,11 +18,7 @@ public class NoManualFingerprint implements IXposedHookLoadPackage {
 
       @Override
       protected Object replaceHookedMethod(final MethodHookParam param) throws Throwable {
-        int userId = (Integer) param.args[0];
-        int strongAuthForUser = (Integer) XposedHelpers.callMethod(param.thisObject, "getStrongAuthForUser", userId);
-
-        int STRONG_AUTH_NOT_REQUIRED = XposedHelpers.getIntField(param.thisObject, "STRONG_AUTH_NOT_REQUIRED");
-        return (strongAuthForUser & ~STRONG_AUTH_NOT_REQUIRED) == 0;
+        return false;
       }
     });
   }

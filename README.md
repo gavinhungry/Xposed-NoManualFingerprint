@@ -1,6 +1,6 @@
-Xposed-NoManualFingerprint
-==========================
-Xposed module to disable fingerprint unlock when manually locked.
+Xposed-NoLockscreenFingerprint
+==============================
+Xposed module to disable fingerprint unlock from lockscreen.
 
 Build
 -----
@@ -10,7 +10,7 @@ Build
 Install
 -------
 
-    $ adb install dist/NoManualFingerprint.apk
+    $ adb install dist/NoLockscreenFingerprint.apk
 
 License
 -------
